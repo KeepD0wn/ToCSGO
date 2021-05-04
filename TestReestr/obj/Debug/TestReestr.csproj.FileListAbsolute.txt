@@ -1,0 +1,7 @@
+C:\Users\gvozd\source\repos\HashTest\TestReestr\bin\Debug\TestReestr.exe.config
+C:\Users\gvozd\source\repos\HashTest\TestReestr\bin\Debug\TestReestr.exe
+C:\Users\gvozd\source\repos\HashTest\TestReestr\bin\Debug\TestReestr.pdb
+C:\Users\gvozd\source\repos\HashTest\TestReestr\obj\Debug\TestReestr.csprojAssemblyReference.cache
+C:\Users\gvozd\source\repos\HashTest\TestReestr\obj\Debug\TestReestr.csproj.CoreCompileInputs.cache
+C:\Users\gvozd\source\repos\HashTest\TestReestr\obj\Debug\TestReestr.exe
+C:\Users\gvozd\source\repos\HashTest\TestReestr\obj\Debug\TestReestr.pdb

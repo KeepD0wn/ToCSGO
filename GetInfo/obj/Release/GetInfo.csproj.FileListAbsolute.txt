@@ -1,0 +1,6 @@
+C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\GetInfo.exe.config
+C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\GetInfo.exe
+C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\GetInfo.pdb
+C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\GetInfo.csproj.CoreCompileInputs.cache
+C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\GetInfo.exe
+C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\GetInfo.pdb

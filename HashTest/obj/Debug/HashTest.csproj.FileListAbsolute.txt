@@ -1,0 +1,6 @@
+C:\Users\gvozd\source\repos\HashTest\HashTest\bin\Debug\HashTest.exe.config
+C:\Users\gvozd\source\repos\HashTest\HashTest\bin\Debug\HashTest.exe
+C:\Users\gvozd\source\repos\HashTest\HashTest\bin\Debug\HashTest.pdb
+C:\Users\gvozd\source\repos\HashTest\HashTest\obj\Debug\HashTest.csproj.CoreCompileInputs.cache
+C:\Users\gvozd\source\repos\HashTest\HashTest\obj\Debug\HashTest.exe
+C:\Users\gvozd\source\repos\HashTest\HashTest\obj\Debug\HashTest.pdb

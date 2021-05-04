@@ -1,0 +1,12 @@
+C:\Users\gvozd\source\repos\HashTest\StartPath\bin\Debug\StartPath.exe.config
+C:\Users\gvozd\source\repos\HashTest\StartPath\bin\Debug\StartPath.exe
+C:\Users\gvozd\source\repos\HashTest\StartPath\bin\Debug\StartPath.pdb
+C:\Users\gvozd\source\repos\HashTest\StartPath\obj\Debug\StartPath.csproj.CoreCompileInputs.cache
+C:\Users\gvozd\source\repos\HashTest\StartPath\obj\Debug\StartPath.exe
+C:\Users\gvozd\source\repos\HashTest\StartPath\obj\Debug\StartPath.pdb
+C:\Users\gvozd\source\repos\HashTest\StartPath\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\gvozd\source\repos\HashTest\StartPath\obj\Debug\StartPath.csproj.CopyComplete
+C:\Users\gvozd\source\repos\HashTest\StartPath\obj\Debug\StartPath.Properties.Resources.resources
+C:\Users\gvozd\source\repos\HashTest\StartPath\obj\Debug\StartPath.csproj.GenerateResource.cache
+C:\Users\gvozd\source\repos\HashTest\StartPath\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\gvozd\source\repos\HashTest\StartPath\obj\Debug\StartPath.csprojAssemblyReference.cache
