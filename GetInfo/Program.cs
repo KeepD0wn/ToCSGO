@@ -119,9 +119,9 @@ namespace GetInfo
                     else
                         Console.WriteLine("Not enought data");
                 }
-                catch (Exception ex)
+                catch
                 {
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("[SYSTEM] Something went wrong");
                 }
             }
             else

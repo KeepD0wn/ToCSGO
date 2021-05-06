@@ -101,11 +101,10 @@ namespace Info
 
                 Console.WriteLine("Done");
             }
-            catch(Exception ex)
+            catch
             {
-                Console.WriteLine(ex);
+                Console.WriteLine("[SYSTEM] Something went wrong");
             }            
-
             Console.ReadKey();
         }
     }
