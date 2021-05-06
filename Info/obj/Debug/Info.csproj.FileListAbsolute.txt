@@ -5,5 +5,6 @@ C:\Users\gvozd\source\repos\HashTest\Info\obj\Debug\Info.csproj.CoreCompileInput
 C:\Users\gvozd\source\repos\HashTest\Info\obj\Debug\Info.exe
 C:\Users\gvozd\source\repos\HashTest\Info\obj\Debug\Info.pdb
 C:\Users\gvozd\source\repos\HashTest\Info\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\gvozd\source\repos\HashTest\Info\obj\Debug\Info.csproj.Fody.CopyLocal.cache
 C:\Users\gvozd\source\repos\HashTest\Info\obj\Debug\Info.csproj.CopyComplete
+C:\Users\gvozd\source\repos\HashTest\Info\obj\Debug\Info.csprojAssemblyReference.cache
+C:\Users\gvozd\source\repos\HashTest\Info\bin\Debug\System.Diagnostics.DiagnosticSource.dll
