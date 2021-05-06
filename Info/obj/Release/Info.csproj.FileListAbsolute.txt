@@ -6,5 +6,4 @@ C:\Users\gvozd\source\repos\HashTest\Info\obj\Release\Info.exe
 C:\Users\gvozd\source\repos\HashTest\Info\obj\Release\Info.pdb
 C:\Users\gvozd\source\repos\HashTest\Info\bin\Release\System.Diagnostics.DiagnosticSource.xml
 C:\Users\gvozd\source\repos\HashTest\Info\obj\Release\Info.csproj.CopyComplete
-C:\Users\gvozd\source\repos\HashTest\Info\obj\Release\Info.csprojAssemblyReference.cache
 C:\Users\gvozd\source\repos\HashTest\Info\bin\Release\System.Diagnostics.DiagnosticSource.dll

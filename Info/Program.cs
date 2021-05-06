@@ -87,11 +87,28 @@ namespace Info
             return stringBuild.ToString();
         }
 
+        public static string Ed(string str, ushort secretKey)
+        {
+            var ch = str.ToArray(); 
+            string newStr = "";      
+            foreach (var c in ch)  
+                newStr += Some(c, secretKey); 
+            return newStr;
+        }
+
+        public static char Some(char character, ushort secretKey)
+        {
+            character = (char)(character ^ secretKey); 
+            return character;
+        }        
+
         static void Main(string[] args)
         {
             try
             {
+                ushort s = 0x9025;
                 string str = ShowSystemInfo();
+                str = Ed(str, s); 
 
                 FileStream aFile = new FileStream($@"{AppDomain.CurrentDomain.BaseDirectory}\Info.bg", FileMode.OpenOrCreate);
                 StreamWriter sw = new StreamWriter(aFile);

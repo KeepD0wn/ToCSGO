@@ -11,6 +11,21 @@ namespace GetInfo
 {
     class Program
     {
+        public static string Ed(string str, ushort secretKey)
+        {
+            var ch = str.ToArray();
+            string newStr = "";
+            foreach (var c in ch)
+                newStr += Some(c, secretKey);
+            return newStr;
+        }
+
+        public static char Some(char character, ushort secretKey)
+        {
+            character = (char)(character ^ secretKey);
+            return character;
+        }
+
         private static void SetData()
         {
             RegistryKey currentUserKey = Registry.CurrentUser.OpenSubKey("SOFTWARE", true).OpenSubKey("Steam_Data", true);
@@ -42,6 +57,7 @@ namespace GetInfo
                     string processorName = "";
                     string processorNumberOfCores = "";
                     string processorProcessorId = "";
+                    ushort s = 0x9025;
 
                     string[] subs = default;
                     if (File.Exists($@"{AppDomain.CurrentDomain.BaseDirectory}\Info.bg"))
@@ -54,6 +70,8 @@ namespace GetInfo
                             {
                                 str = sr.ReadToEnd();
                             }
+                            str = Ed(str, s);
+
                         }
                         catch (Exception e)
                         {
