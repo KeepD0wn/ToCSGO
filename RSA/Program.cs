@@ -111,16 +111,16 @@ namespace RSA
 
             if (IsTheNumberSimple(p) && IsTheNumberSimple(q))
             {
-                string s = "ryzen5 192.168.1.1";
+                string s = "";
 
-                //StreamReader sr = new StreamReader("in.txt");
+                StreamReader sr = new StreamReader("Info1.bg");
 
-                //while (!sr.EndOfStream)
-                //{
-                //    s += sr.ReadLine();
-                //}
+                while (!sr.EndOfStream)
+                {
+                    s += sr.ReadLine();
+                }
 
-                // sr.Close();
+                sr.Close();
 
                 // s = s.ToUpper();
 
@@ -178,7 +178,7 @@ namespace RSA
             Program k = new Program();
             k.ToCipher();
 
-           // k.Decipher();
+            k.Decipher();
             Console.ReadKey();
         }
     }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,10 +39,40 @@ namespace GetInfo
             string dataReestr = currentUserKey.GetValue("user").ToString();
         }
 
-        static void Main(string[] args)
-        {           
+        private static string GetPassword()
+        {
+            StringBuilder input = new StringBuilder();
+            while (true)
+            {
+                int x = Console.CursorLeft;
+                int y = Console.CursorTop;
+                ConsoleKeyInfo key = Console.ReadKey(true);
+                if (key.Key == ConsoleKey.Enter)
+                {
+                    Console.WriteLine();
+                    break;
+                }
+                if (key.Key == ConsoleKey.Backspace && input.Length > 0)
+                {
+                    input.Remove(input.Length - 1, 1);
+                    Console.SetCursorPosition(x - 1, y);
+                    Console.Write(" ");
+                    Console.SetCursorPosition(x - 1, y);
+                }
+                else if (key.Key != ConsoleKey.Backspace)
+                {
+                    input.Append(key.KeyChar);
+                    Console.Write("*");
+                }
+            }
+            return input.ToString();
+        }
+      
+        static void Main(string[] args4)
+        {
+            Console.Title = "Licenser";
             Console.WriteLine("Password: ");
-            string g =Console.ReadLine();
+            string g = GetPassword();
             MD5 md = new MD5CryptoServiceProvider();
             byte[] checkSum1 = md.ComputeHash(Encoding.UTF8.GetBytes(g));
             string result1 = BitConverter.ToString(checkSum1).Replace("-", String.Empty);
@@ -57,6 +88,9 @@ namespace GetInfo
                     string processorName = "";
                     string processorNumberOfCores = "";
                     string processorProcessorId = "";
+                    string diskModel = "";
+                    string diskInterface = "";
+                    string diskSerial = "";
                     ushort s = 0x9025;
 
                     string[] subs = default;
@@ -117,9 +151,30 @@ namespace GetInfo
                             string[] parts = subs[i].Split(':');
                             processorProcessorId = parts[1];
                         }
+                        if (subs[i].Contains("Disk Model"))
+                        {
+                            string[] parts = subs[i].Split(':');
+                            diskModel = parts[1];
+                        }
+                        if (subs[i].Contains("Disk Interface"))
+                        {
+                            string[] parts = subs[i].Split(':');
+                            diskInterface = parts[1];
+                        }
+                        if (subs[i].Contains("Disk Serial"))
+                        {
+                            string[] parts = subs[i].Split(':');
+                            diskSerial = parts[1];
+                        }
                     }
-                    final = userIP + userName + videoProcessor + processorName + processorNumberOfCores + processorProcessorId;
+                    final = userIP + userName + videoProcessor + processorName + processorNumberOfCores + processorProcessorId + diskModel + diskInterface + diskSerial;
                     final = final.Replace(" ", "").Replace("-", "").ToLower();
+
+                    FileStream aFile1 = new FileStream($@"{AppDomain.CurrentDomain.BaseDirectory}\DONOTSEND.txt", FileMode.OpenOrCreate);
+                    StreamWriter sw1 = new StreamWriter(aFile1);
+                    aFile1.Seek(0, SeekOrigin.End);
+                    sw1.WriteLine(final);
+                    sw1.Close();
 
                     MD5 md5 = new MD5CryptoServiceProvider();
                     byte[] checkSum = md5.ComputeHash(Encoding.UTF8.GetBytes(final));
@@ -132,7 +187,7 @@ namespace GetInfo
                     sw.WriteLine(result);
                     sw.Close();
 
-                    if (userIP != "" && userName != "" && videoProcessor != "" && processorName != "" && processorNumberOfCores != "" && processorProcessorId != "")
+                    if (userIP != "" && userName != "" && videoProcessor != "" && processorName != "" && processorNumberOfCores != "" && processorProcessorId != "" && diskModel != "" && diskInterface != "" && diskSerial != "")
                         Console.WriteLine("Done");
                     else
                         Console.WriteLine("Not enought data");

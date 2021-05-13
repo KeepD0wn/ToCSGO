@@ -1,0 +1,85 @@
+UserIP: 26.160.209.28
+VideoAdapterRAM: 4293918720
+VideoCaption: NVIDIA GeForce GTX 1060 6GB
+VideoDescription: NVIDIA GeForce GTX 1060 6GB
+VideoProcessor: NVIDIA GeForce GTX 1060 6GB
+VideoAdapterRAM: 4293918720
+VideoCaption: NVIDIA GeForce RTX 3060 Ti
+VideoDescription: NVIDIA GeForce RTX 3060 Ti
+VideoProcessor: NVIDIA GeForce RTX 3060 Ti
+UserName: gvozd
+OperatingSystemBuildNumber: 19042
+OperatingSystemCaption: Майкрософт Windows 10 Домашняя
+OperatingSystemName: Майкрософт Windows 10 Домашняя|C:\Windows|\Device\Harddisk0\Partition3
+OperatingSystemRegisteredUser: gvozdko90@mail.ru
+OperatingSystemSerialNumber: 00326-30000-00001-AA065
+ProcessorName: AMD Ryzen 5 2600X Six-Core Processor           
+ProcessorNumberOfCores: 6
+ProcessorProcessorId: 178BFBFF00800F82
+VolumeCapacity: 239397343232
+VolumeCaption: C:\
+VolumeDriveLetter: C:
+VolumeDriveType: 3
+VolumeFileSystem: NTFS
+VolumeFreeSpace: 106061545472
+VolumeCapacity: 534769664
+VolumeCaption: \\?\Volume{4f168197-e260-416a-9140-b8a16f006999}\
+VolumeDriveLetter: 
+VolumeDriveType: 3
+VolumeFileSystem: NTFS
+VolumeFreeSpace: 86605824
+VolumeCapacity: 1024191361024
+VolumeCaption: K:\
+VolumeDriveLetter: K:
+VolumeDriveType: 3
+VolumeFileSystem: NTFS
+VolumeFreeSpace: 752089284608
+VolumeCapacity: 1000203087872
+VolumeCaption: D:\
+VolumeDriveLetter: D:
+VolumeDriveType: 3
+VolumeFileSystem: NTFS
+VolumeFreeSpace: 598732701696
+VolumeCapacity: 5000770088960
+VolumeCaption: Z:\
+VolumeDriveLetter: Z:
+VolumeDriveType: 3
+VolumeFileSystem: NTFS
+VolumeFreeSpace: 4994942099456
+VolumeCapacity: 5000770088960
+VolumeCaption: E:\
+VolumeDriveLetter: E:
+VolumeDriveType: 3
+VolumeFileSystem: NTFS
+VolumeFreeSpace: 750518890496
+VolumeCapacity: 5000770088960
+VolumeCaption: F:\
+VolumeDriveLetter: F:
+VolumeDriveType: 3
+VolumeFileSystem: NTFS
+VolumeFreeSpace: 4994942099456
+VolumeCapacity: 100663296
+VolumeCaption: \\?\Volume{d1b5d50f-5bfa-4f4c-8dbc-a89ec7e38f2a}\
+VolumeDriveLetter: 
+VolumeDriveType: 3
+VolumeFileSystem: FAT32
+VolumeFreeSpace: 72934400
+VolumeCapacity: 206472192
+VolumeCaption: \\?\Volume{97c221de-7726-4384-a90f-d24e6af2b4a3}\
+VolumeDriveLetter: 
+VolumeDriveType: 3
+VolumeFileSystem: FAT32
+VolumeFreeSpace: 206471680
+VolumeCapacity: 206472192
+VolumeCaption: \\?\Volume{1315448a-bccc-4bff-9e89-a51548f7f35e}\
+VolumeDriveLetter: 
+VolumeDriveType: 3
+VolumeFileSystem: FAT32
+VolumeFreeSpace: 206471680
+VolumeCapacity: 206472192
+VolumeCaption: \\?\Volume{6a17e417-b30e-42dc-b9ec-569be7a4cab8}\
+VolumeDriveLetter: 
+VolumeDriveType: 3
+VolumeFileSystem: FAT32
+VolumeFreeSpace: 206471680
+
