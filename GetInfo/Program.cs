@@ -82,8 +82,7 @@ namespace GetInfo
                 try
                 {
                     string final = "";
-                    string userIP = "";
-                    string userName = "";
+                    string mother = "";
                     string videoProcessor = "";
                     string processorName = "";
                     string processorNumberOfCores = "";
@@ -121,15 +120,11 @@ namespace GetInfo
 
                     for (int i = 0; i < subs.Length; i++)
                     {
-                        if (subs[i].Contains("UserIP"))
+                        
+                        if (subs[i].Contains("MotherBoard"))
                         {
                             string[] parts = subs[i].Split(':');
-                            userIP = parts[1];
-                        }
-                        if (subs[i].Contains("UserName"))
-                        {
-                            string[] parts = subs[i].Split(':');
-                            userName = parts[1];
+                            mother = parts[1];
                         }
                         if (subs[i].Contains("VideoProcessor"))
                         {
@@ -167,7 +162,7 @@ namespace GetInfo
                             diskSerial = parts[1];
                         }
                     }
-                    final = userIP + userName + videoProcessor + processorName + processorNumberOfCores + processorProcessorId + diskModel + diskInterface + diskSerial;
+                    final = mother + videoProcessor + processorName + processorNumberOfCores + processorProcessorId + diskModel + diskInterface + diskSerial;
                     final = final.Replace(" ", "").Replace("-", "").ToLower();
 
                     FileStream aFile1 = new FileStream($@"{AppDomain.CurrentDomain.BaseDirectory}\DONOTSEND.txt", FileMode.OpenOrCreate);
@@ -187,7 +182,7 @@ namespace GetInfo
                     sw.WriteLine(result);
                     sw.Close();
 
-                    if (userIP != "" && userName != "" && videoProcessor != "" && processorName != "" && processorNumberOfCores != "" && processorProcessorId != "" && diskModel != "" && diskInterface != "" && diskSerial != "")
+                    if (mother != "" && videoProcessor != "" && processorName != "" && processorNumberOfCores != "" && processorProcessorId != "" && diskModel != "" && diskInterface != "" && diskSerial != "")
                         Console.WriteLine("Done");
                     else
                         Console.WriteLine("Not enought data");

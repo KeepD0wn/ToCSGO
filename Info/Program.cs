@@ -7,6 +7,7 @@ using System.Management;
 using System.IO;
 using System.Security.Cryptography;
 using System.Numerics;
+using Microsoft.Win32;
 
 namespace Info
 {
@@ -17,11 +18,8 @@ namespace Info
         {
             StringBuilder stringBuild = new StringBuilder();
             String host = System.Net.Dns.GetHostName();
-            System.Net.IPAddress ip = System.Net.Dns.GetHostByName(host).AddressList[0];
-            string ipAdress = ip.ToString();
-            string userName = Environment.UserName;
-            
-            stringBuild.AppendLine("UserIP: " + ipAdress);   
+            System.Net.IPAddress ip = System.Net.Dns.GetHostByName(host).AddressList[0];            
+            stringBuild.AppendLine("MotherBoard: "+ Registry.GetValue("HKEY_LOCAL_MACHINE\\HARDWARE\\DESCRIPTION\\System\\BIOS", "BaseBoardProduct", 0).ToString());
 
             Console.WriteLine("Wait");
             ManagementObjectSearcher searcher11 =new ManagementObjectSearcher("root\\CIMV2","SELECT * FROM Win32_VideoController");
@@ -32,7 +30,6 @@ namespace Info
                 stringBuild.AppendLine($"VideoDescription: {queryObj["Description"]}");
                 stringBuild.AppendLine($"VideoProcessor: {queryObj["VideoProcessor"]}");
             }
-            stringBuild.AppendLine("UserName: " + userName);
           
             ManagementObjectSearcher searcher5 = new ManagementObjectSearcher("root\\CIMV2","SELECT * FROM Win32_OperatingSystem");
             foreach (ManagementObject queryObj in searcher5.Get())
