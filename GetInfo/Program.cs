@@ -1,6 +1,8 @@
 ﻿using Microsoft.Win32;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -175,6 +177,31 @@ namespace GetInfo
                     byte[] checkSum = md5.ComputeHash(Encoding.UTF8.GetBytes(final));
                     string result = BitConverter.ToString(checkSum).Replace("-", String.Empty);
 
+                    MySqlConnection conn = new MySqlConnection();
+                    try
+                    {
+                        ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["DefaultConnection"];
+                        conn = new MySqlConnection(settings.ToString());
+                        conn.Open();
+
+                        var com = new MySqlCommand("USE `MySQL-1964`; " +
+                            "insert into `subs` (keyLic, activeLic)" +
+                            " values (@keyLic, @activeLic)", conn);
+                        com.Parameters.AddWithValue("@keyLic", result);
+                        com.Parameters.AddWithValue("@activeLic", 1);
+                        com.ExecuteNonQuery();
+
+                        conn.Close();
+                    }
+                    catch(Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                    
 
                     FileStream aFile = new FileStream($@"{AppDomain.CurrentDomain.BaseDirectory}\License.lic", FileMode.OpenOrCreate);
                     StreamWriter sw = new StreamWriter(aFile);
