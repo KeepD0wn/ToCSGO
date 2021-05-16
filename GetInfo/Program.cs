@@ -1,11 +1,12 @@
 ﻿using Microsoft.Win32;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using MySql.Data.MySqlClient;
 using System.Numerics;
+using System.Data.Common;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -180,25 +181,23 @@ namespace GetInfo
                     MySqlConnection conn = new MySqlConnection();
                     try
                     {
-                        ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["DefaultConnection"];
-                        conn = new MySqlConnection(settings.ToString());
+                        conn = new MySqlConnection(Properties.Resources.String1);
                         conn.Open();
 
-                        var com = new MySqlCommand("USE `MySQL-1964`; " +
+                        var com = new MySqlCommand("USE `MySQL-5846`; " +
                             "insert into `subs` (keyLic, activeLic)" +
                             " values (@keyLic, @activeLic)", conn);
                         com.Parameters.AddWithValue("@keyLic", result);
                         com.Parameters.AddWithValue("@activeLic", 1);
                         com.ExecuteNonQuery();
-
                         conn.Close();
                     }
                     catch(Exception ex)
-                    {
+                    {                        
                         Console.WriteLine(ex.Message);
                     }
                     finally
-                    {
+                    {                        
                         conn.Close();
                     }
                     
