@@ -60,6 +60,11 @@ namespace Info
                 }
             }
 
+            ManagementObjectSearcher searcher10 = new ManagementObjectSearcher("root\\CIMV2",
+                   "SELECT UUID FROM Win32_ComputerSystemProduct");
+            foreach (ManagementObject queryObj in searcher10.Get())
+                stringBuild.AppendLine("UUID: " + queryObj["UUID"].ToString());
+
             ManagementObjectSearcher searcher1 =new ManagementObjectSearcher("root\\CIMV2","SELECT * FROM Win32_Volume");
             foreach (ManagementObject queryObj in searcher1.Get())
             {        

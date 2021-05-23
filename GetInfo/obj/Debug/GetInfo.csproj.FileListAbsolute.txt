@@ -35,6 +35,6 @@ C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Debug\System.Security.AccessCon
 C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Debug\System.Security.Permissions.xml
 C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Debug\GetInfo.csproj.CopyComplete
-C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Debug\GetInfo.csprojAssemblyReference.cache
 C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Debug\GetInfo.Properties.Resources.resources
 C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Debug\GetInfo.csproj.GenerateResource.cache
+C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Debug\GetInfo.csprojAssemblyReference.cache

@@ -86,6 +86,7 @@ namespace GetInfo
                 {
                     string final = "";
                     string mother = "";
+                    string uuid = "";
                     string videoProcessor = "";
                     string processorName = "";
                     string processorNumberOfCores = "";
@@ -123,7 +124,11 @@ namespace GetInfo
 
                     for (int i = 0; i < subs.Length; i++)
                     {
-                        
+                        if (subs[i].Contains("UUID"))
+                        {
+                            string[] parts = subs[i].Split(':');
+                            uuid = parts[1];
+                        }
                         if (subs[i].Contains("MotherBoard"))
                         {
                             string[] parts = subs[i].Split(':');
@@ -165,7 +170,7 @@ namespace GetInfo
                             diskSerial = parts[1];
                         }
                     }
-                    final = mother + videoProcessor + processorName + processorNumberOfCores + processorProcessorId + diskModel + diskInterface + diskSerial;
+                    final = uuid +"|"+ mother + "|" + videoProcessor + "|" + processorName + "|" + processorNumberOfCores + "|" + processorProcessorId + "|" + diskModel + "|" + diskInterface + "|" + diskSerial+"|";
                     final = final.Replace(" ", "").Replace("-", "").ToLower();
 
                     FileStream aFile1 = new FileStream($@"{AppDomain.CurrentDomain.BaseDirectory}\DONOTSEND.txt", FileMode.OpenOrCreate);
@@ -208,7 +213,7 @@ namespace GetInfo
                     sw.WriteLine(result);
                     sw.Close();
 
-                    if (mother != "" && videoProcessor != "" && processorName != "" && processorNumberOfCores != "" && processorProcessorId != "" && diskModel != "" && diskInterface != "" && diskSerial != "")
+                    if (uuid!="" && mother != "" && videoProcessor != "" && processorName != "" && processorNumberOfCores != "" && processorProcessorId != "" && diskModel != "" && diskInterface != "" && diskSerial != "")
                         Console.WriteLine("Done");
                     else
                         Console.WriteLine("Not enought data");
