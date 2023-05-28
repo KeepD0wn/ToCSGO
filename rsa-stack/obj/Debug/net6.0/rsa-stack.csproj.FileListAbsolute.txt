@@ -1,0 +1,15 @@
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\bin\Debug\net6.0\rsa-stack.exe
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\bin\Debug\net6.0\rsa-stack.deps.json
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\bin\Debug\net6.0\rsa-stack.runtimeconfig.json
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\bin\Debug\net6.0\rsa-stack.dll
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\bin\Debug\net6.0\rsa-stack.pdb
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\obj\Debug\net6.0\rsa-stack.csproj.AssemblyReference.cache
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\obj\Debug\net6.0\rsa-stack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\obj\Debug\net6.0\rsa-stack.AssemblyInfoInputs.cache
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\obj\Debug\net6.0\rsa-stack.AssemblyInfo.cs
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\obj\Debug\net6.0\rsa-stack.csproj.CoreCompileInputs.cache
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\obj\Debug\net6.0\rsa-stack.dll
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\obj\Debug\net6.0\refint\rsa-stack.dll
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\obj\Debug\net6.0\rsa-stack.pdb
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\obj\Debug\net6.0\rsa-stack.genruntimeconfig.cache
+C:\Users\gvozd\source\repos\HashTest\rsa-stack\obj\Debug\net6.0\ref\rsa-stack.dll

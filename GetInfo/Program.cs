@@ -10,6 +10,7 @@ using System.Data.Common;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using MySqlX.XDevAPI.Common;
 
 namespace GetInfo
 {
@@ -70,7 +71,60 @@ namespace GetInfo
             }
             return input.ToString();
         }
-      
+
+        static string DecryptStringFromBytes_Aes(byte[] cipherText, byte[] Key, byte[] IV)
+        {
+            // Check arguments.
+            if (cipherText == null || cipherText.Length <= 0)
+                throw new ArgumentNullException("cipherText");
+            if (Key == null || Key.Length <= 0)
+                throw new ArgumentNullException("Key");
+            if (IV == null || IV.Length <= 0)
+                throw new ArgumentNullException("IV");
+
+            // Declare the string used to hold
+            // the decrypted text.
+            string plaintext = null;
+
+            // Create an Aes object
+            // with the specified key and IV.
+            using (Aes aesAlg = Aes.Create())
+            {
+                aesAlg.Key = Key;
+                aesAlg.IV = IV;
+
+                // Create a decryptor to perform the stream transform.
+                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
+                // Create the streams used for decryption.
+                using (MemoryStream msDecrypt = new MemoryStream(cipherText))
+                {
+                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                        {
+
+                            // Read the decrypted bytes from the decrypting stream
+                            // and place them in a string.
+                            plaintext = srDecrypt.ReadToEnd();
+                        }
+                    }
+                }
+            }
+
+            return plaintext;
+        }
+
+        public static byte[] FromHex(string hex)
+        {
+            byte[] raw = new byte[hex.Length / 2];
+            for (int i = 0; i < raw.Length; i++)
+            {
+                raw[i] = Convert.ToByte(hex.Substring(i * 2, 2), 16);
+            }
+            return raw;
+        }
+
         static void Main(string[] args4)
         {
             Console.Title = "Licenser";
@@ -80,7 +134,7 @@ namespace GetInfo
             byte[] checkSum1 = md.ComputeHash(Encoding.UTF8.GetBytes(g));
             string result1 = BitConverter.ToString(checkSum1).Replace("-", String.Empty);
 
-            if (result1 == "687CA27241454EAAF7BEE30D7DD9EE1F")
+            if (result1 == "AD6B07AE560C4ED221F74D4E904CFE6F")
             {
                 try
                 {
@@ -94,7 +148,8 @@ namespace GetInfo
                     string diskModel = "";
                     string diskInterface = "";
                     string diskSerial = "";
-                    ushort s = 0x9025;
+                    byte[] key = FromHex("9E111B0A8EB5440711CC485D325C7F410A70C8A1BD94F4B9FB3DFD24DD5D9047");
+                    byte[] IV = FromHex("7B6D7F876DFED21517ABA903831378EE");
 
                     string[] subs = default;
                     if (File.Exists($@"{AppDomain.CurrentDomain.BaseDirectory}\Info.bg"))
@@ -107,7 +162,9 @@ namespace GetInfo
                             {
                                 str = sr.ReadToEnd();
                             }
-                            str = Ed(str, s);
+
+                            byte[] bytes = Convert.FromBase64String(str);
+                            str = DecryptStringFromBytes_Aes(bytes, key, IV);
 
                         }
                         catch (Exception e)
@@ -173,11 +230,11 @@ namespace GetInfo
                     final = uuid +"|"+ mother + "|" + videoProcessor + "|" + processorName + "|" + processorNumberOfCores + "|" + processorProcessorId + "|" + diskModel + "|" + diskInterface + "|" + diskSerial+"|";
                     final = final.Replace(" ", "").Replace("-", "").ToLower();
 
-                    FileStream aFile1 = new FileStream($@"{AppDomain.CurrentDomain.BaseDirectory}\DONOTSEND.txt", FileMode.OpenOrCreate);
-                    StreamWriter sw1 = new StreamWriter(aFile1);
-                    aFile1.Seek(0, SeekOrigin.End);
-                    sw1.WriteLine(final);
-                    sw1.Close();
+                    //FileStream aFile1 = new FileStream($@"{AppDomain.CurrentDomain.BaseDirectory}\DONOTSEND.txt", FileMode.Create);
+                    //StreamWriter sw1 = new StreamWriter(aFile1);
+                    //aFile1.Seek(0, SeekOrigin.End);
+                    //sw1.WriteLine(final);
+                    //sw1.Close();
 
                     MD5 md5 = new MD5CryptoServiceProvider();
                     byte[] checkSum = md5.ComputeHash(Encoding.UTF8.GetBytes(final));
@@ -186,15 +243,16 @@ namespace GetInfo
                     MySqlConnection conn = new MySqlConnection();
                     try
                     {
-                        conn = new MySqlConnection(Properties.Resources.String1);
+                        conn = new MySqlConnection(Properties.Resources.String1);                        
                         conn.Open();
 
-                        var com = new MySqlCommand("USE `MySQL-5846`; " +
-                            "insert into `subs` (keyLic, activeLic)" +
-                            " values (@keyLic, @activeLic)", conn);
-                        com.Parameters.AddWithValue("@keyLic", result);
-                        com.Parameters.AddWithValue("@activeLic", 1);
-                        com.ExecuteNonQuery();
+                        var command = new MySqlCommand("USE subs; " +
+                            "insert into `subs` (keyLic, activeLic, info)" +
+                            " values (@keyLic, @activeLic, @info)", conn);
+                        command.Parameters.AddWithValue("@keyLic", result);
+                        command.Parameters.AddWithValue("@activeLic", 1);
+                        command.Parameters.AddWithValue("@info", final);
+                        command.ExecuteNonQuery();
                         conn.Close();
                     }
                     catch(Exception ex)
@@ -207,7 +265,7 @@ namespace GetInfo
                     }
                     
 
-                    FileStream aFile = new FileStream($@"{AppDomain.CurrentDomain.BaseDirectory}\License.lic", FileMode.OpenOrCreate);
+                    FileStream aFile = new FileStream($@"{AppDomain.CurrentDomain.BaseDirectory}\License.lic", FileMode.Create);
                     StreamWriter sw = new StreamWriter(aFile);
                     aFile.Seek(0, SeekOrigin.End);
                     sw.WriteLine(result);

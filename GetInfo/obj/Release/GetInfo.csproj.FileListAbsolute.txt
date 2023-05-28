@@ -1,9 +1,4 @@
-C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\GetInfo.exe.config
-C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\GetInfo.exe
-C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\GetInfo.pdb
 C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\GetInfo.csproj.CoreCompileInputs.cache
-C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\GetInfo.exe
-C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\GetInfo.pdb
 C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\BouncyCastle.Crypto.dll
 C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\Google.Protobuf.dll
 C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\K4os.Compression.LZ4.dll
@@ -37,3 +32,10 @@ C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\System.Security.Princip
 C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\GetInfo.csproj.CopyComplete
 C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\GetInfo.Properties.Resources.resources
 C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\GetInfo.csproj.GenerateResource.cache
+C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\GetInfo.csproj.AssemblyReference.cache
+C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\GetInfo.csproj.SuggestedBindingRedirects.cache
+C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\ACTIVATOR.exe.config
+C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\ACTIVATOR.exe
+C:\Users\gvozd\source\repos\HashTest\GetInfo\bin\Release\ACTIVATOR.pdb
+C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\ACTIVATOR.exe
+C:\Users\gvozd\source\repos\HashTest\GetInfo\obj\Release\ACTIVATOR.pdb

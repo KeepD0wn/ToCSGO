@@ -7,4 +7,5 @@ C:\Users\gvozd\source\repos\HashTest\Info\obj\Debug\Info.pdb
 C:\Users\gvozd\source\repos\HashTest\Info\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\gvozd\source\repos\HashTest\Info\obj\Debug\Info.csproj.CopyComplete
 C:\Users\gvozd\source\repos\HashTest\Info\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\gvozd\source\repos\HashTest\Info\obj\Debug\Info.csprojAssemblyReference.cache
+C:\Users\gvozd\source\repos\HashTest\Info\obj\Debug\Info.csproj.AssemblyReference.cache
+C:\Users\gvozd\source\repos\HashTest\Info\obj\Debug\Info.csproj.SuggestedBindingRedirects.cache

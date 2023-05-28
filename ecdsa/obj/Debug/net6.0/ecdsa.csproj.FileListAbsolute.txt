@@ -1,0 +1,15 @@
+C:\Users\gvozd\source\repos\HashTest\ecdsa\bin\Debug\net6.0\ecdsa.exe
+C:\Users\gvozd\source\repos\HashTest\ecdsa\bin\Debug\net6.0\ecdsa.deps.json
+C:\Users\gvozd\source\repos\HashTest\ecdsa\bin\Debug\net6.0\ecdsa.runtimeconfig.json
+C:\Users\gvozd\source\repos\HashTest\ecdsa\bin\Debug\net6.0\ecdsa.dll
+C:\Users\gvozd\source\repos\HashTest\ecdsa\bin\Debug\net6.0\ecdsa.pdb
+C:\Users\gvozd\source\repos\HashTest\ecdsa\obj\Debug\net6.0\ecdsa.csproj.AssemblyReference.cache
+C:\Users\gvozd\source\repos\HashTest\ecdsa\obj\Debug\net6.0\ecdsa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gvozd\source\repos\HashTest\ecdsa\obj\Debug\net6.0\ecdsa.AssemblyInfoInputs.cache
+C:\Users\gvozd\source\repos\HashTest\ecdsa\obj\Debug\net6.0\ecdsa.AssemblyInfo.cs
+C:\Users\gvozd\source\repos\HashTest\ecdsa\obj\Debug\net6.0\ecdsa.csproj.CoreCompileInputs.cache
+C:\Users\gvozd\source\repos\HashTest\ecdsa\obj\Debug\net6.0\ecdsa.dll
+C:\Users\gvozd\source\repos\HashTest\ecdsa\obj\Debug\net6.0\refint\ecdsa.dll
+C:\Users\gvozd\source\repos\HashTest\ecdsa\obj\Debug\net6.0\ecdsa.pdb
+C:\Users\gvozd\source\repos\HashTest\ecdsa\obj\Debug\net6.0\ecdsa.genruntimeconfig.cache
+C:\Users\gvozd\source\repos\HashTest\ecdsa\obj\Debug\net6.0\ref\ecdsa.dll
